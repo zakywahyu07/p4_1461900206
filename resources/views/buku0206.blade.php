@@ -4,14 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>
-    1461900206_KEGIATAN4_P
+    Kegiatan 4_1461900206
   </title>
   <link rel="stylesheet" href="{{asset('css/app.css')}}" />
 </head>
 <body>
   <div class="bg-white rounded-lg shadow-lg py-6">
     <div class="block overflow-x-auto mx-6">
-        <a href="/buku/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
+        <a href="/buku0206/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
       <table class="w-full text-left rounded-lg">
         <thead>
           <tr class="text-gray-800 border border-b-0">
