@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\BukuExport;
+use App\Models\Buku;
+use App\Models\Jenis_Buku;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 class BukuController extends Controller
 {
@@ -13,8 +18,16 @@ class BukuController extends Controller
      */
     public function index()
     {
-        //
+        $buku = Buku::join('Jenis_Buku','buku.id','=','Jenis_Buku.id')->get(); //join saja
+        
+        return view('Buku0206',[
+            'buku' => $buku
+        ]);
     }
+    public function export_excel()
+	{
+		return Excel::download(new BukuExport, 'buku.xlsx');
+	}
 
     /**
      * Show the form for creating a new resource.
